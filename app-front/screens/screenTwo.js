@@ -1,11 +1,11 @@
-import { Text } from 'react-native'
+import { Heading } from 'native-base'
 import React from 'react'
 import Layout from '../components/layout'
 
 const ScreenTwo = () => {
     return (
         <Layout>
-            <Text>ScreenTwo</Text>
+            <Heading color="white" size="xl">COMO ESTAS?</Heading>
         </Layout>
     )
 }
