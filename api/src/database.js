@@ -7,6 +7,7 @@ export const connect = async () => {
     await mysql.createConnection({
         host: config.host,
         user: config.user,
+        password: config.password,
 
     })
         .then(async (connection) => {
