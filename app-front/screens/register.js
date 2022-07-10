@@ -20,8 +20,6 @@ const Register = ({ navigation }) => {
                 register(formData)
                     .then(() => navigation.navigate("login")) : console.log('Validation Failed')
 
-
-
         }
 
 
