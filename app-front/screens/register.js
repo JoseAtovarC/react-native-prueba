@@ -6,6 +6,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import Layout from '../components/layout';
 import { useForm } from "react-hook-form"
 import { useAuth } from '../hooks/useAuth';
+import { validate } from '../validate/validateFunction';
 
 const Register = ({ navigation }) => {
     const [message, setmessage] = useState("")
@@ -15,17 +16,16 @@ const Register = ({ navigation }) => {
     const onSubmit = (formData) => {
 
         try {
-
-            if (formData.password !== formData.confirmPassword) {
-                setmessage("Your password and confirmation password do not match")
-            } else {
+            validate(formData, setmessage) ?
                 register(formData)
-                    .then(() => navigation.navigate("login"))
-
-            }
+                    .then(() => navigation.navigate("login")) : console.log('Validation Failed')
 
 
-        } catch (error) {
+
+        }
+
+
+        catch (error) {
             console.log(error)
         }
     }
