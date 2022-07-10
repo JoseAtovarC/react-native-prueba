@@ -89,9 +89,13 @@ export default function App() {
                   </Pressable>;
                 }}>
 
-                  <Menu.Item onPress={() => navigation.navigate("screenOne")}>Screen One</Menu.Item>
-                  <Menu.Item onPress={() => navigation.navigate("screenTwo")}>Screen Two</Menu.Item>
-                  <Menu.Item onPress={async () => {
+                  <Menu.Item p="5" onPress={() => navigation.navigate("screenOne")}><Text fontSize="2xl" fontWeight="bold">
+                    ScreenOne
+                  </Text></Menu.Item>
+                  <Menu.Item p="5" onPress={() => navigation.navigate("screenTwo")}> <Text fontSize="2xl" fontWeight="bold">
+                    ScreenTwo
+                  </Text></Menu.Item>
+                  <Menu.Item p="5" onPress={async () => {
                     try {
                       await AsyncStorage.removeItem(AUTH_STORAGE_KEY)
                       navigation.navigate("login")
@@ -100,7 +104,9 @@ export default function App() {
                     }
 
 
-                  }}>Logout</Menu.Item>
+                  }}><Text fontSize="2xl" fontWeight="bold">
+                      Logout
+                    </Text></Menu.Item>
 
                 </Menu>
               )
