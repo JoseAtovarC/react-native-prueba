@@ -6,6 +6,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import Layout from '../components/layout';
 import { useForm } from "react-hook-form"
 import { useAuth } from '../hooks/useAuth';
+import { validate } from '../validate/validateFunction';
 
 const Register = ({ navigation }) => {
     const [message, setmessage] = useState("")
@@ -15,17 +16,16 @@ const Register = ({ navigation }) => {
     const onSubmit = (formData) => {
 
         try {
-
-            if (formData.password !== formData.confirmPassword) {
-                setmessage("Your password and confirmation password do not match")
-            } else {
+            validate(formData, setmessage) ?
                 register(formData)
-                    .then(() => navigation.navigate("login"))
-
-            }
+                    .then(() => navigation.navigate("login")) : console.log('Validation Failed')
 
 
-        } catch (error) {
+
+        }
+
+
+        catch (error) {
             console.log(error)
         }
     }
@@ -44,6 +44,7 @@ const Register = ({ navigation }) => {
                 md: "25%"
             }} InputLeftElement={<Icon as={<MaterialIcons name="person" />}
                 size={5} ml="2" color="muted.400" />} placeholder="Name"
+
                 mb="3"
                 onChangeText={onChangeField('user')}
             />
@@ -63,6 +64,7 @@ const Register = ({ navigation }) => {
             }} type="password" InputRightElement={<Icon as={<MaterialIcons name={"visibility"} />}
                 size={5} mr="2" color="muted.400" />}
                 onChangeText={onChangeField('confirmPassword')}
+
                 placeholder="Confirm your Password" />
             <Text color="red.600">{message}</Text>
 
