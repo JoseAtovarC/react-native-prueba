@@ -6,7 +6,7 @@
 export const createUser = async (data) => {
 
 
-    const res = await fetch(process.env.PLANSCAPE_API + "/auth/register", {
+    const res = await fetch(process.env.API_URL + "/auth/register", {
         method: 'POST',
 
         headers: {
@@ -32,7 +32,7 @@ export const createUser = async (data) => {
 export const loginUser = async (data) => {
 
 
-    const res = await fetch(process.env.PLANSCAPE_API + "/auth/login", {
+    const res = await fetch(process.env.API_URL + "/auth/login", {
         method: 'POST',
 
         headers: {
@@ -53,7 +53,7 @@ export const loginUser = async (data) => {
 export const userInfo = async (token) => {
 
 
-    const res = await fetch(process.env.PLANSCAPE_API + "/user", {
+    const res = await fetch(process.env.API_URL + "/user", {
         method: 'GET',
 
         headers: {
