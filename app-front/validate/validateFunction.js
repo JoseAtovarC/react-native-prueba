@@ -12,6 +12,7 @@ export const validate = (formData, setmessage) => {
         return false;
     } else if (formData.password !== formData.confirmPassword) {
         setmessage("Your password and confirmation password do not match")
+        return false;
 
     } else if (!/(?=.*[0-9])/.test(formData.password)) {
         setmessage("Your password should contain at least one number")
