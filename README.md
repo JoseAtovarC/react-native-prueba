@@ -16,6 +16,6 @@ Tecnologías usadas:
 ## Backend
 
 Nodejs con express, conectado con MYSQL con la libreria mysql2. 
-Para ver nuestros metodos de Api  [Swagger UI API](https://elfin-title-production.up.railway.app/docs).
+Para ver los metodos del Api  [Swagger UI API](https://elfin-title-production.up.railway.app/docs).
 
 
