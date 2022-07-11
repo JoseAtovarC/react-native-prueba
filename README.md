@@ -8,9 +8,9 @@ Tecnologías usadas:
 
 ## Frontend
 
- *Se utiliza la libreria NativeBase ara el estilo general de la app. Para la naevgacion se utiliza react-navigation, para el formulario react-hook-form.
+ Se utiliza la libreria NativeBase para el estilo general de la app. Para la navegacion se utiliza react-navigation y para el formulario react-hook-form.
  
- *La lógica del auth se desarrolla en un custom hook llamado useAuth donde guardamos el token que nos llega del backend en el sistema de almacenamiento AsyncStorage, usando la libreria react-native-async-storage.
+ La lógica del auth se desarrolla en un custom hook llamado useAuth donde guardamos el token que nos llega del backend en el sistema de almacenamiento AsyncStorage, usando la libreria react-native-async-storage.
  
  
 ## Backend
