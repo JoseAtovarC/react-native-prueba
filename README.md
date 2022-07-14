@@ -12,7 +12,7 @@ Tecnologías usadas:
  
  La lógica del auth se desarrolla en un custom hook llamado useAuth donde guardamos el token que nos llega del backend en el sistema de almacenamiento AsyncStorage, usando la libreria react-native-async-storage.
  
- Url para ver la app usando la apliacion expo https://expo.dev/@josee/app-front.
+ Url para ver la app usando la aplicacion expo https://expo.dev/@josee/app-front.
  
  
 ## Backend
